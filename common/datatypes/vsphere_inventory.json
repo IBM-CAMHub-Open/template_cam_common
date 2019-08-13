@@ -1,0 +1,184 @@
+{
+	"name": "vsphere_managed_inventory_definition",
+	"label": "vSphere Managed Inventory Definition",
+	"description": "vSphere Managed Inventory Objects that are used in virtual machine creation.",
+	"attributes": [
+		{
+			"name": "datacenter",
+			"description": "The name of a datacenter in which to create the virtual machine and other assets.",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Datacenter Name",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "resource_pool",
+			"description": "Name of the default resource pool for the cluster. Must be specified as 'cluster_name/resource_pool'",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Resource Pool Name",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "vm_folder",
+			"description": "vSphere folder name to create the virtual vachine.",
+			"type": "string",
+			"required": false,
+			"secured": false,
+			"label": "Virtual Machine Folder Name",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "vm_image_template",
+			"description": "Virtual machine image template name. If it is in a folder then include folder name as follows 'folder_name/image_template_name'",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Virtual Machine Image Template Name",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "vm_domain_name",
+			"description": "Virtual machine domain name.",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Virtual Machine Domain Name",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "vm_os_user",
+			"description": "The user name to connect to the virtual machine",
+			"default": "root",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Virtual Machine Template User Name",
+			"hidden": false,
+			"immutable": false
+		},
+		{
+			"name": "vm_os_private_ssh_key",
+			"description": "The user private key to connect to the virtual machine.",
+			"type": "string",
+			"required": false,
+			"secured": false,
+			"label": "Virtual Machine Template User Private Key (base64 encoded)",
+			"hidden": false,
+			"immutable": false
+		},
+		{
+			"name": "vm_os_public_ssh_key",
+			"description": "Virtual Machine Template User Public Key to be added to the VM",
+			"type": "string",
+			"required": false,
+			"secured": false,
+			"label": "Virtual Machine Template User Public Key",
+			"hidden": true,
+			"immutable": false
+		},		
+		{
+			"name": "vm_os_password",
+			"description": "The user password to connect to the virtual machine.",
+			"type": "string",
+			"required": true,
+			"secured": true,
+			"label": "Virtual Machine Template User Password",
+			"hidden": false,
+			"immutable": false
+		},
+		{
+			"name": "datastore",
+			"description": "Virtual machine datastore name",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Datastore Name",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "network",
+			"description": "vSphere Network name.",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Network name",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "adapter_type",
+			"description": "Network adapter type for vNIC Configuration",
+			"default": "vmxnet3",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Network Adapter Type",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "dns_servers",
+			"description": "A list of DNS servers to add on the virtual machine.",
+			"type": "list",
+			"required": true,
+			"secured": false,
+			"label": "DNS Servers",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "dns_suffixes",
+			"description": "A list of DNS search domains to add to the DNS configuration on the virtual machine.",
+			"type": "list",
+			"required": true,
+			"secured": false,
+			"label": "DNS Suffixes",
+			"hidden": false,
+			"immutable": false
+		}, 
+		{
+			"name": "vm_ipv4_gateway",
+			"description": "IPv4 Gateway Address for network customization on the virtual machine.",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "IPv4 Gateway",
+			"hidden": false,
+			"immutable": false,
+			"regex": "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9]).){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$",
+			"regexdesc": "Provide a Valid IP address for the Virtual Machine Gateway"
+		}, 
+		{
+			"name": "vm_ipv4_netmask",
+			"description": "Integer value between 1 and 32 for the prefix length (CIDR) to use when statically assigning an IPv4 address",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "IPv4 Netmask (CIDR)",
+			"hidden": false,
+			"immutable": false,
+			"regex": "^([8-9]|[1-2][0-9]|3[0-2])$",
+			"regexdesc": "Provide an integer value between 1 and 32"
+		},
+		{
+			"name": "vm_clone_timeout",
+			"description": "The timeout, in minutes, to wait for the virtual machine clone to complete.",
+			"default": "30",
+			"type": "string",
+			"required": true,
+			"secured": false,
+			"label": "Virtual Machine Clone Timeout",
+			"hidden": false,
+			"immutable": false
+		}
+	]
+}

@@ -1,0 +1,82 @@
+{
+    "name": "openshift_lb_node_on_vmware",
+	"label": "OpenShift Container Platform LB Node on VMware",
+    "description": "Defines the compute, memory, and storage capacity of an OCP LB node on vSphere.",
+    "attributes": [
+  
+      {
+        "name": "ocp_node_memory",
+        "description": "OCP Node Memory Allocation (MB)",
+        "default": "32768",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "Memory Allocation (MB)",
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "ocp_node_vcpu",
+        "description": "OCP Node vCPU Allocation",
+        "default": "16",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "vCPU Allocation",
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "ocp_node_disk1_keep_on_remove",
+        "default": "false",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "ocp_node_disk1_keep_on_remove",
+        "hidden": true,
+        "immutable": false
+      },
+      {
+        "name": "ocp_node_disk1_size",
+        "description": "OCP Node Disk Size Disk 1 (GB)",
+        "default": "200",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "Disk 1 Size (GB)",
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "ocp_node_disk2_enable",
+        "default": "true",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "ocp_node_disk2_enable",
+        "hidden": true,
+        "immutable": false
+      },
+      {
+        "name": "ocp_node_disk2_keep_on_remove",
+        "default": "false",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "ocp_node_disk2_keep_on_remove",
+        "hidden": true,
+        "immutable": false
+      },
+      {
+        "name": "ocp_node_disk2_size",
+        "description": "OCP Node Disk Size Disk 2 (GB)",
+        "default": "100",
+        "type": "string",
+        "required": false,
+        "secured": false,
+        "label": "Disk 2 Size (GB)",
+        "hidden": false,
+        "immutable": false
+      }
+    ]
+}

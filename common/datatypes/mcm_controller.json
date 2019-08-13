@@ -1,6 +1,6 @@
 {
   "name": "mcm_controller",
-  "label": "mcm_controller",
+  "label": "MCM Controller",
   "description": "Data structure describing connection details for an IBM Multicloud Manager Controller and its host IBM Cloud Private server",
   "attributes": [
     {

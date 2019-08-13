@@ -1,0 +1,118 @@
+{
+    "name": "open_shift_node_on_vmware",
+	"label": "OpenShift Container Platform Node on VMware",
+    "description": "Defines the compute, memory, and storage capacity of an OCP node on vSphere.",
+    "attributes": [
+        {
+            "name": "single_hostname_ip",
+            "description": "OCP Node Hostname and IP Address",
+            "default": {
+              "Hostname": "0.0.0.0"
+            },
+            "type": "map",
+            "required": true,
+            "secured": false,
+            "label": "OCP Node Hostname and IP Address",
+            "hidden": false,
+            "immutable": false
+          },
+          {
+            "name": "single_memory",
+            "description": "OCP Node Memory Allocation (MB)",
+            "default": "32768",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "OCP Node Memory Allocation (MB)",
+            "hidden": false,
+            "immutable": false
+          },
+          {
+            "name": "single_vcpu",
+            "description": "OCP Node vCPU Allocation",
+            "default": "16",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "OCP Node vCPU Allocation",
+            "hidden": false,
+            "immutable": false
+          },
+          {
+            "name": "single_vm_disk1_keep_on_remove",
+            "default": "false",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "single_vm_disk1_keep_on_remove",
+            "hidden": true,
+            "immutable": false
+          },
+          {
+            "name": "single_vm_disk1_size",
+            "description": "OCP Node Disk Size Disk 1 (GB)",
+            "default": "200",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "OCP Node Disk 1 Size (GB)",
+            "hidden": false,
+            "immutable": false
+          },
+          {
+            "name": "single_vm_disk2_enable",
+            "default": "true",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "single_vm_disk2_enable",
+            "hidden": true,
+            "immutable": false
+          },
+          {
+            "name": "single_vm_disk2_keep_on_remove",
+            "default": "false",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "single_vm_disk2_keep_on_remove",
+            "hidden": true,
+            "immutable": false
+          },
+          {
+            "name": "single_vm_disk2_size",
+            "description": "OCP Node Disk Size Disk 2 (GB)",
+            "default": "100",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "OCP Node Disk 2 Size (GB)",
+            "hidden": false,
+            "immutable": false
+          },
+          {
+            "name": "single_vm_ipv4_gateway",
+            "description": "OCP Node IP Gateway Address",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "OCP Node IPV4 Gateway",
+            "hidden": false,
+            "immutable": false,
+            "regex": "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9]).){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$",
+            "regexdesc": "Provide a Valid IP address for the Virtual Machine Gateway"
+          },
+          {
+            "name": "single_vm_ipv4_prefix_length",
+            "description": "Integer value between 1 and 32 for the prefix length, CIDR, to use when statically assigning an IPv4 address",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "OCP Node IP Netmask (CIDR)",
+            "hidden": false,
+            "immutable": false,
+            "regex": "^([8-9]|[1-2][0-9]|3[0-2])$"
+          }
+      
+    ]
+}

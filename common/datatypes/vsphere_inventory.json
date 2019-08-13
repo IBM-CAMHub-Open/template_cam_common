@@ -67,6 +67,7 @@
 		{
 			"name": "vm_os_private_ssh_key",
 			"description": "The user private key to connect to the virtual machine.",
+			"default": "",
 			"type": "string",
 			"required": false,
 			"secured": true,
@@ -77,6 +78,7 @@
 		{
 			"name": "vm_os_public_ssh_key",
 			"description": "Virtual Machine Template User Public Key to be added to the VM",
+			"default": "",
 			"type": "string",
 			"required": false,
 			"secured": false,
@@ -87,8 +89,9 @@
 		{
 			"name": "vm_os_password",
 			"description": "The user password to connect to the virtual machine.",
+			"default": "",
 			"type": "string",
-			"required": true,
+			"required": false,
 			"secured": true,
 			"label": "Virtual Machine Template User Password",
 			"hidden": false,

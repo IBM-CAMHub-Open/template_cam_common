@@ -69,7 +69,7 @@
 			"description": "The user private key to connect to the virtual machine.",
 			"type": "string",
 			"required": false,
-			"secured": false,
+			"secured": true,
 			"label": "Virtual Machine Template User Private Key (base64 encoded)",
 			"hidden": false,
 			"immutable": false

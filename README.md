@@ -1,0 +1,1 @@
+# template_cam_common

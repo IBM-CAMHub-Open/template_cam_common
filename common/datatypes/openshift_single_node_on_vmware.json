@@ -1,7 +1,7 @@
 {
     "name": "openshift_single_node_on_vmware",
-	"label": "OpenShift Container Platform Compute Node on VMware",
-    "description": "Defines the compute, memory, and storage capacity of an OCP compute node on vSphere.",
+	  "label": "OpenShift Container Platform Single Node on VMware",
+    "description": "Defines the compute, memory, and storage capacity of an OCP single node on vSphere.",
     "attributes": [
   
       {

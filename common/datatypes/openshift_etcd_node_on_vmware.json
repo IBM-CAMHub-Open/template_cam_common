@@ -7,7 +7,7 @@
       {
         "name": "memory",
         "description": "OCP Node Memory Allocation (MB)",
-        "default": "4096",
+        "default": "16384",
         "type": "string",
         "required": true,
         "secured": false,
@@ -18,7 +18,7 @@
       {
         "name": "vcpu",
         "description": "OCP Node vCPU Allocation",
-        "default": "2",
+        "default": "8",
         "type": "string",
         "required": true,
         "secured": false,

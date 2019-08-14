@@ -5,7 +5,7 @@
     "attributes": [
   
       {
-        "name": "ocp_node_memory",
+        "name": "memory",
         "description": "OCP Node Memory Allocation (MB)",
         "default": "32768",
         "type": "string",
@@ -16,7 +16,7 @@
         "immutable": false
       },
       {
-        "name": "ocp_node_vcpu",
+        "name": "vcpu",
         "description": "OCP Node vCPU Allocation",
         "default": "16",
         "type": "string",
@@ -27,17 +27,39 @@
         "immutable": false
       },
       {
-        "name": "ocp_node_disk1_keep_on_remove",
+        "name": "enable_gluster_fs",
+        "description": "Indicates wether GlusterFS storage should be enabled on compute nodes",
         "default": "false",
         "type": "string",
         "required": true,
         "secured": false,
-        "label": "ocp_node_disk1_keep_on_remove",
+        "label": "Enable GlusterFS",
+        "hidden": false,
+        "options": [
+          {
+            "value": "true",
+            "label": "true",
+            "default": true
+          },
+          {
+            "value": "false",
+            "label": "false"
+          }
+        ],
+        "immutable": false
+      },
+      {
+        "name": "disk1_keep_on_remove",
+        "default": "false",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "disk1_keep_on_remove",
         "hidden": true,
         "immutable": false
       },
       {
-        "name": "ocp_node_disk1_size",
+        "name": "disk1_size",
         "description": "OCP Node Disk Size Disk 1 (GB)",
         "default": "200",
         "type": "string",
@@ -48,27 +70,27 @@
         "immutable": false
       },
       {
-        "name": "ocp_node_disk2_enable",
+        "name": "disk2_enable",
         "default": "true",
         "type": "string",
         "required": true,
         "secured": false,
-        "label": "ocp_node_disk2_enable",
+        "label": "disk2_enable",
         "hidden": true,
         "immutable": false
       },
       {
-        "name": "ocp_node_disk2_keep_on_remove",
+        "name": "disk2_keep_on_remove",
         "default": "false",
         "type": "string",
         "required": true,
         "secured": false,
-        "label": "ocp_node_disk2_keep_on_remove",
+        "label": "disk2_keep_on_remove",
         "hidden": true,
         "immutable": false
       },
       {
-        "name": "ocp_node_disk2_size",
+        "name": "disk2_size",
         "description": "OCP Node Disk Size Disk 2 (GB)",
         "default": "100",
         "type": "string",

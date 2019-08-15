@@ -29,7 +29,7 @@
     },
     {
       "name": "icp_admin_password",
-      "type": "password",
+      "type": "string",
       "description": "Password for connecting to the ICP API server",
       "label": "ICP Admin User Password",
       "required": true,

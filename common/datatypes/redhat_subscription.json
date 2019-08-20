@@ -1,0 +1,28 @@
+{
+	"name": "redhat_subscription",
+	"label": "RedHat Subscription",
+	"description": "Data structure defining a RedHat Subscription",
+	"attributes": [
+        {
+            "name": "rh_user",
+            "description": "Red Hat Account Username",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "Red Hat Account Username",
+            "hidden": false,
+            "immutable": false
+        },
+        {
+            "name": "rh_password",
+            "description": "Red Hat Account Password",
+            "type": "string",
+            "required": true,
+            "secured": true,
+            "label": "Red Hat Account Password",
+            "hidden": false,
+            "immutable": false
+        }
+    ]
+}
+

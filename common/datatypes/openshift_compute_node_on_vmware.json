@@ -29,7 +29,6 @@
       {
         "name": "enable_gluster_fs",
         "description": "Indicates wether GlusterFS storage should be enabled on compute nodes",
-        "default": "false",
         "type": "string",
         "required": true,
         "secured": false,
@@ -38,12 +37,12 @@
         "options": [
           {
             "value": "true",
-            "label": "true",
-            "default": true
+            "label": "true"
           },
           {
             "value": "false",
-            "label": "false"
+            "label": "false",
+            "default": true
           }
         ],
         "immutable": false

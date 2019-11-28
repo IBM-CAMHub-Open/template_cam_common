@@ -1,0 +1,51 @@
+{
+    "name": "openshift42_compute_node_on_vmware",
+    "label": "OpenShift Container Platform 4.2 Compute Node on VMware",
+    "description": "Defines the cpu, number of compute node, memory, and storage capacity of an OCP compute node on vSphere.",
+    "attributes": [
+      {
+        "name": "compute_count",
+        "type": "string",
+        "description": "",
+        "label": "Number of compute VMs to create",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 2
+      },
+      {
+        "name": "ocp_compute_vm_cpu",
+        "type": "string",
+        "description": "",
+        "label": "Compute Node Node vCPU Allocation",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 2
+      },
+      {
+        "name": "ocp_compute_vm_disk_size",
+        "type": "string",
+        "description": "",
+        "label": "Compute Node Disk Size (GB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 120
+      },
+      {
+        "name": "ocp_compute_vm_memory",
+        "type": "string",
+        "description": "",
+        "label": "Compute Node Memory Allocation (MB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 8192
+      }
+    ]
+  }

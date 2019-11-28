@@ -1,0 +1,51 @@
+{
+    "name": "openshift42_control_plane_node_on_vmware",
+    "label": "OpenShift Container Platform Control Plane Node on VMware",
+    "description": "Defines the cpu, number of node, memory, and storage capacity of an OCP Control Plane node on vSphere.",
+    "attributes": [
+      {
+        "name": "control_plane_count",
+        "type": "string",
+        "description": "",
+        "label": "Number of control plane VMs to create",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 3
+      },
+      {
+        "name": "ocp_control_vm_cpu",
+        "type": "string",
+        "description": "",
+        "label": "Control Plane Node vCPU Allocation",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 4
+      },
+      {
+        "name": "ocp_control_vm_disk_size",
+        "type": "string",
+        "description": "",
+        "label": "Control Plane Node Disk Size (GB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 120
+      },
+      {
+        "name": "ocp_control_vm_memory",
+        "type": "string",
+        "description": "",
+        "label": "Control Plane Node Memory Allocation (MB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 16384
+      }
+    ]
+  }

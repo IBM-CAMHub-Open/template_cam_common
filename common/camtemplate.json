@@ -1,0 +1,46 @@
+{
+    "name": "Common Cloud Automation Manager Components",
+    "description": "This template will deploy common CAM components (terraform and metadata json files)",
+    "version": "1.0",
+    "imageUrl": "",
+    "image": "",
+    "type": "prebuilt",
+    "status": "active",
+    "manifest": {
+      "template_type": "Terraform",
+      "template_format": "HCL",
+      "template_provider": "VMware vSphere",
+      "template": {
+        "templateData": "",
+        "templateVariables": "",
+        "templateOutput": ""
+      },
+      "template_source": {
+        "githubRepoUrl": "",
+        "githubAccessToken": "",
+        "relativePathToTemplateFolder": "common",
+        "templateFileName": "main.tf"
+      }
+    },
+    "metadata": {
+      "displayName": "Common Cloud Automation Manager Components",
+      "providerDisplayName": "VMware vSphere",
+      "longDescription": "This template will deploy common CAM components (terraform and metadata json files)",
+      "bullets": [{
+    "title": "Clouds",
+    "description": " VMware vSphere<br>"}
+],
+      "featuredImageUrl": "",
+      "imageUrl": "",
+      "mediumImageUrl": "",
+      "smallImageUrl": "",
+      "documentationUrl": "",
+      "termsUrl": "",
+      "media": [
+      ]
+    },
+    "toolchain": {
+      "git": "https://github.com/ibmcam/cam-toolchain"
+    }
+}
+

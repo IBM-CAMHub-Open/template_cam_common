@@ -1,0 +1,28 @@
+{
+	"name": "redhat_subscription",
+	"label": "RedHat Subscription",
+	"description": "Data structure defining a RedHat Subscription",
+	"attributes": [
+        {
+            "name": "username",
+            "description": "Red Hat Subscription Manager Account Username",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "Red Hat Subscription Manager Account Username",
+            "hidden": false,
+            "immutable": false
+        },
+        {
+            "name": "password",
+            "description": "Red Hat Subscription Manager Account Password",
+            "type": "string",
+            "required": true,
+            "secured": true,
+            "label": "Red Hat Subscription Manager Account Password",
+            "hidden": false,
+            "immutable": false
+        }
+    ]
+}
+

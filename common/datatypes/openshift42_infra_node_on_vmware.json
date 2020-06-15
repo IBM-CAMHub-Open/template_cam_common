@@ -1,0 +1,95 @@
+{
+    "name": "openshift42_infra_node_on_vmware",
+    "label": "OpenShift Container Platform Infrastructure Node on VMware",
+    "description": "Defines the cpu, datastore, memory, and storage capacity of an OCP Infrastructure node on vSphere.",
+    "attributes": [
+      {
+        "name": "infranode_memory",
+        "type": "string",
+        "description": "",
+        "label": "Infrastructure Node Memory Allocation (MB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 8192
+      },
+      {
+        "name": "infranode_vcpu",
+        "type": "string",
+        "description": "",
+        "label": "Infrastructure Node vCPU Allocation",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 4
+      },
+      {
+        "name": "infranode_vm_disk1_datastore",
+        "type": "string",
+        "description": "",
+        "label": "Infrastructure Node Disk 1 datastore name",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": ""
+      },
+      {
+        "name": "infranode_vm_disk1_keep_on_remove",
+        "type": "string",
+        "description": "",
+        "label": "infranode_vm_disk1_keep_on_remove",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": false
+      },
+      {
+        "name": "infranode_vm_disk1_size",
+        "type": "string",
+        "description": "",
+        "label": "Infrastructure Node Disk Size Disk 1 (GB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 200
+      },
+      {
+        "name": "infranode_vm_disk2_datastore",
+        "type": "string",
+        "description": "",
+        "label": "Infrastructure Node Disk 2 datastore name",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": ""
+      },
+      {
+        "name": "infranode_vm_disk2_keep_on_remove",
+        "type": "string",
+        "description": "",
+        "label": "infranode_vm_disk2_keep_on_remove",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": false
+      },
+      {
+        "name": "infranode_vm_disk2_size",
+        "type": "string",
+        "description": "This disk is for NFS storage used by OCP image registry. Minimum size is 100 GB.",
+        "label": "Infrastructure Node NFS Disk Size(GB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 100
+      }
+    ]
+  }

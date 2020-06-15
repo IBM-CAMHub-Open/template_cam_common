@@ -1,0 +1,40 @@
+{
+    "name": "openshift42_bootstrap_node_on_vmware",
+    "label": "OpenShift Container Platform 4.2 Bootstrap Node on VMware",
+    "description": "Defines the cpu, memory, and storage capacity of an OCP Bootstrap node on vSphere.",
+    "attributes": [
+      {
+        "name": "ocp_boot_vm_cpu",
+        "type": "string",
+        "description": "",
+        "label": "Bootstrap Node vCPU Allocation",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 4
+      },
+      {
+        "name": "ocp_boot_vm_disk_size",
+        "type": "string",
+        "description": "",
+        "label": "Bootstrap Node Disk Size (GB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 120
+      },
+      {
+        "name": "ocp_boot_vm_memory",
+        "type": "string",
+        "description": "",
+        "label": "Bootstrap Node Memory Allocation (MB)",
+        "required": "true",
+        "secured": "false",
+        "immutable": "false",
+        "hidden": "false",
+        "default": 16384
+      }
+    ]
+  }

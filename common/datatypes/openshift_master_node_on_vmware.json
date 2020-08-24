@@ -1,0 +1,51 @@
+{
+    "name": "openshift_master_node_on_vmware",
+	  "label": "OpenShift Container Platform Master Node on VMware",
+    "description": "Defines the compute, memory, and storage capacity of an OCP master node on vSphere.",
+    "attributes": [
+  
+      {
+        "name": "memory",
+        "description": "OCP Node Memory Allocation (MB)",
+        "default": "16384",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "Memory Allocation (MB)",
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "vcpu",
+        "description": "OCP Node vCPU Allocation",
+        "default": "8",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "vCPU Allocation",
+        "hidden": false,
+        "immutable": false
+      },
+      {
+        "name": "disk1_keep_on_remove",
+        "default": "false",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "disk1_keep_on_remove",
+        "hidden": true,
+        "immutable": false
+      },
+      {
+        "name": "disk1_size",
+        "description": "OCP Node Disk Size Disk 1 (GB)",
+        "default": "200",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "Disk 1 Size (GB)",
+        "hidden": false,
+        "immutable": false
+      }
+    ]
+}
